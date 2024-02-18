@@ -1,88 +1,83 @@
 <!DOCTYPE html>
+<!--
+video code from https://github.com/designcourse/html5-video-scroll
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Cybernetic Garden</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+  <header>
+    <div class = "top"> Cybernetic Garden </div>
+  </header>
 
     <section class="container">
         <div class="content">
             <h1>Imagine</h1>
-            <p>Start it like this..</p>
+            <p>A society where innovation thrives</p>
+            <p>A society where nature survives</p>
+            <p>A haven of green silicon</p>
+            <p>Sustainable and clean</p>
+
         </div>
     </section>
 
     <section class="container">
         <div class="content">
             <h1>A Cybernetic Forest</h1>
-            <p>Start it like this..</p>
+            <p>Where branches and circuits</p>
+            <p>Work together and are interconnected</p>
+            <p>Harmonious living</p>
+
         </div>
     </section>
 
     <section class="container">
         <div class="content">
-            <h1>where deer stroll peacefully</h1>
-            <p>Start it like this..</p>
+            <h1>In this Realm</h1>
+            <p>We can call home</p>
+            <p>Not tomorrow</p>
+            <p>Today</p>
         </div>
     </section>
 
     <section class="container">
         <div class="content">
-            <h1>past computers</h1>
-            <p>Start it like this..</p>
+            <h1>A Digital Sanctuary</h1>
+            <p>Guiding the lost</p>
+            <p>A seamless blend of the Earth</p>
+            <p>And of human creation</p>
         </div>
     </section>
 
     <section class="container">
         <div class="content">
-            <h1>of a cybernetic ecology</h1>
-            <p>Start it like this..</p>
+            <h1>A Path of Progress</h1>
+            <p>Through sand and glaciers</p>
+            <p>Rivers of binary</p>
+            <p>Not just in our dreams</p>
         </div>
     </section>
 
     <div id="set-height"></div>
 
-    <video id="v0" tabindex="0", autobuffer preload>
-        <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="gardenC.mp4"></source>
-    </video>
+<!-- change video file here -->
+    <div id = "videoDiv">
+      <video id="v0" tabindex="0", autobuffer preload>
+          <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="GardenC_3.mp4"></source>
+      </video>
+    </div>
     <script src="sticky.js"></script>
-    <script>
+    <script src="scroll.js"></script>
 
-        enterView({
-            selector: 'section',
-            enter: function(el) {
-                el.classList.add('entered');
-            }
-        })
+    <div class="blackbox"></div>
 
-        var frameNumber = 0, // start video at frame 0
-        // lower numbers = faster playback
-        playbackConst = 1000,
-        // get page height from video duration
-        setHeight = document.getElementById("set-height"),
-        // select video element
-        vid = document.getElementById('v0');
-        // var vid = $('#v0')[0]; // jquery option
-
-    // dynamically set the page height according to video length
-    vid.addEventListener('loadedmetadata', function() {
-    setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
-    });
-
-
-    // Use requestAnimationFrame for smooth playback
-    function scrollPlay(){
-    var frameNumber  = window.pageYOffset/playbackConst;
-    vid.currentTime  = frameNumber;
-    window.requestAnimationFrame(scrollPlay);
-    }
-
-    window.requestAnimationFrame(scrollPlay);
-
-    </script>
 </body>
+
+
 </html>
