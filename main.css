@@ -32,6 +32,19 @@ header{
     bottom: 6%;
     width: 60%;
     opacity: 100%;
+    z-index: -1;
+
+  }
+
+.images{
+    z-index: 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    opacity: 50%;
+
+
 }
 
 #set-height {
@@ -55,19 +68,19 @@ section {
 p { font-size: 2em; }
 /* timings between each scroll for the headers and paragraphs */
 section:nth-of-type(1) {
-    height: 1200px;
+    height: 1000px;
 }
 section:nth-of-type(2) {
-    height: 1200px;
+    height: 1000px;
 }
 section:nth-of-type(3) {
-    height: 1200px;
+    height: 1000px;
 }
 section:nth-of-type(4) {
-    height: 1200px;
+    height: 1000px;
 }
 section:nth-of-type(5) {
-    height: 1500px;
+    height: 1000px;
 }
 
 
@@ -80,7 +93,7 @@ h1{
   min-height: 100%;
   position: relative;
   z-index: 1;
-  box-shadow: inset -20px 0 38px -18px #ff26f9,inset -3px -13px 65px -18px yellow;
+  box-shadow: inset -20px 0 38px -18px #93ffcc,inset -3px -13px 65px -18px yellow;
   font-size: 3em;
   display: inline-block;
   padding: 10px 15px;
@@ -96,8 +109,8 @@ h1:before,h1:after{
     height:100%;
 }
 h1:before{
-    background: #ffe42d;
-    box-shadow: 0 0 140px 64px #ffe42d;
+    background: #6cf0ff;
+    box-shadow: 0 0 140px 64px #6cf0ff;
     z-index:2;
     top: -96%;
 left: -72%;
